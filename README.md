@@ -53,30 +53,30 @@ This dataset is **small but high-quality**, with audio/text that *actually refle
 We trained three models using the `whisper large v2` architecture with identical settings for fair comparison.
 
 ### 1. 🧼 Clean-Only: `Common Voice + FLEURS + OpenSLR`
-- ✅ Best benchmark accuracy
-- ❌ Poor generalization to real-world test set
+- Best benchmark accuracy
+- Poor generalization to real-world test set
 - **FLEURS WER**: 12.21%  
 - **Domain WER**: 62.86%
 
 ### 2. 🧩 Domain-Only: `Custom dataset only`
-- ✅ Better WER on domain test set  
-- ✅ Improvements even on FLEURS, Improves with more custom data,  
+- Better WER on domain test set  
+- Improvements even on FLEURS, Improves with more custom data,  
 - **FLEURS WER**: 34.73% *(improved from 40.00% baseline)*  
 - **Domain WER**: 40.44%
 
-🧠 **Conclusion**: *Our dataset alone taught the model something generalizable.* It has:
+**Conclusion**: *Our dataset alone taught the model something generalizable.* It has:
 - Good acoustic diversity
 - Solid label quality
 - Enough variation to create useful generalization to clean data
 - showcases generalization as similar understanding of both
 
 ### 3. 🔀 Combined: `Common Voice + FLEURS + OpenSLR + Custom dataset`
-- ✅ Better overall WER
-- ✅ Slight trade-off on FLEURS, but large gain on domain data 
+- Better overall WER
+- Slight trade-off on FLEURS, but large gain on domain data 
 - **FLEURS WER**: 13.21% *(improved from 40.00% baseline)*  
 - **Domain WER**: 39.42%
 
-🧠 **Conclusion**: Combined data improves real-world usability with minimal loss on benchmarks.
+**Conclusion**: Combined data improves real-world usability with minimal loss on benchmarks.
 
 ---
 
@@ -111,9 +111,9 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 
 | Model | FLEURS WER | Domain Test WER |
 |-------|------------|------------------|
-| CV + FLEURS | 12.21% ✅ | 62.86% ❌ |
-| Custom only | 34.73% ✅ | 40.44% ✅ |
-| All combined | 13.21% ✅ | 39.42% ✅ |
+| CV + FLEURS | 12.21%  | 62.86%  |
+| Custom only | 34.73%  | 40.44%  |
+| All combined | 13.21% | 39.42%  |
 
 ---
 
@@ -158,11 +158,17 @@ Your feedback will help us refine our dataset and improve ASR for underrepresent
 - Pytorch
 - datasets
 
-## ```bibtex
+
+---
+
+## 📜 Citation
+
+```bibtex
 @misc{asr_swahili_yoruba_2025,
-  title={Robust ASR for Swahili: A Multidataset Ablation Study},
-  author={Kazi Rafat},
+  title={Robust ASR for Swahili and Yoruba: A Multidataset Ablation Study},
+  author={Your Name},
   year={2025},
-  url={https://github.com/King-Rafat/Robust_Swahili_ASR},
+  url={https://github.com/your-org/your-repo},
 }
+
 
