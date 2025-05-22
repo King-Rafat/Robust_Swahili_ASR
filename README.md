@@ -166,9 +166,9 @@ Your feedback will help us refine our dataset and improve ASR for underrepresent
 ```bibtex
 @misc{asr_swahili_yoruba_2025,
   title={Robust ASR for Swahili and Yoruba: A Multidataset Ablation Study},
-  author={Your Name},
+  author={Kazi Rafat},
   year={2025},
-  url={https://github.com/your-org/your-repo},
+  url={https://github.com/King-Rafat/Robust_Swahili_ASR},
 }
 
 
