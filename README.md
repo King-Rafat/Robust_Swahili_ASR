@@ -7,7 +7,7 @@ Welcome to our open-source repository exploring **automatic speech recognition (
 
 We present a complete ablation study using:
 
-- 🌐 Open-source datasets (Common Voice + FLEURS)
+- 🌐 Open-source datasets (Common Voice + FLEURS + OPENSLR)
 - 🗣️ A hand-collected, high-variance real-world dataset
 - 🧪 Three ASR models: Clean-only, Domain-only, Combined
 
@@ -15,12 +15,13 @@ We present a complete ablation study using:
 
 ## 🚀 Why This Matters
 
-Low-resource African languages like Swahili and Yoruba are often evaluated on clean, controlled datasets. But real-world usage involves:
+Low-resource African languages like Swahili and Yoruba are often trained and evaluated on clean, controlled datasets. But real-world usage involves:
 
 - Noisy environments (phones, streets, homes)
-- Spontaneous, conversational phrasing
+- Spontaneous, conversational phrasing (Non-read out)
 - Speaker and device diversity
 - Non-standard syntax and informal speech
+- Groups not-involved in data freelance.
 
 🔎 We show that **benchmark performance is not a reliable proxy for real-world ASR quality** — and that even a small, well-labeled domain dataset can **improve generalization** meaningfully.
 
@@ -30,9 +31,9 @@ Low-resource African languages like Swahili and Yoruba are often evaluated on cl
 
 | Dataset | Type | Langs | Hours | Notes |
 |--------|------|-------|--------|-------|
-| **Common Voice 13.0** | Read-aloud, crowd-sourced | Swahili, Yoruba | ~250h | Mixed mic quality, many speakers |
-| **FLEURS** | Benchmark-quality read speech | Swahili, Yoruba | ~50h | Clean studio-style speech |
-| **Custom Dataset** | Conversational, noisy, real-world | Swahili, Yoruba | ~50h | Diverse, high-noise, manually labeled |
+| **Common Voice 11.0** | Converstional, Read-aloud, crowd-sourced | Swahili | ~250h | noisy, Mixed mic quality, many speakers |
+| **FLEURS** | Benchmark-quality read speech | Swahili | ~50h | Clean studio-style speech |
+| **Custom Dataset** | Conversational, noisy, real-world | Swahili | ~50h | Diverse, high-noise, manually labeled |
 
 ### 🧠 Custom Dataset Highlights
 
@@ -43,36 +44,37 @@ Low-resource African languages like Swahili and Yoruba are often evaluated on cl
 - ✅ **Transcript quality**: 90%+ alignment verified by native speakers  
 - 🎯 **Use cases**: Real-life human-computer interaction, subtitle generation, local voice assistants
 
-This dataset is **small but high-quality**, with audio/text that *actually reflects how people speak* — unlike read-aloud corpora.
+This dataset is **small but high-quality**, with audio/text that *actually reflects how people speak* — unlike read-aloud, non-diverse, corpora.
 
 ---
 
 ## 🧪 Model Variants Trained
 
-We trained three models using the `wav2vec2` architecture with identical settings for fair comparison.
+We trained three models using the `whisper large v2` architecture with identical settings for fair comparison.
 
-### 1. 🧼 Clean-Only: `Common Voice + FLEURS`
+### 1. 🧼 Clean-Only: `Common Voice + FLEURS + OpenSLR`
 - ✅ Best benchmark accuracy
 - ❌ Poor generalization to real-world test set
 - **FLEURS WER**: 12.21%  
-- **Domain WER**: 69.00%
+- **Domain WER**: 62.86%
 
 ### 2. 🧩 Domain-Only: `Custom dataset only`
 - ✅ Better WER on domain test set  
-- ✅ Surprisingly strong results even on FLEURS  
-- **FLEURS WER**: 34.00% *(improved from 40.00% baseline)*  
-- **Domain WER**: 42.00%
+- ✅ Improvements even on FLEURS, Improves with more custom data,  
+- **FLEURS WER**: 34.73% *(improved from 40.00% baseline)*  
+- **Domain WER**: 40.44%
 
 🧠 **Conclusion**: *Our dataset alone taught the model something generalizable.* It has:
 - Good acoustic diversity
 - Solid label quality
 - Enough variation to create useful generalization to clean data
+- showcases generalization as similar understanding of both
 
-### 3. 🔀 Combined: `CV + FLEURS + Custom`
-- ✅ Best generalization across both domains  
-- ✅ Slight trade-off on FLEURS, but large gain on domain data  
-- **FLEURS WER**: 13.00%  
-- **Domain WER**: 31.00%
+### 3. 🔀 Combined: `Common Voice + FLEURS + OpenSLR + Custom dataset`
+- ✅ Better overall WER
+- ✅ Slight trade-off on FLEURS, but large gain on domain data 
+- **FLEURS WER**: 13.21% *(improved from 40.00% baseline)*  
+- **Domain WER**: 39.42%
 
 🧠 **Conclusion**: Combined data improves real-world usability with minimal loss on benchmarks.
 
@@ -88,7 +90,7 @@ Here’s the evidence that it is **helping**:
 
 - **FLEURS improved from 40% → 34%** just using our data  
 - On clean + custom model, FLEURS WER only increased slightly (12 → 13)  
-- Domain WER dropped significantly when our data was added (69 → 31)
+- Domain WER dropped significantly when our data was added (62 → 39)
 - Models trained with our data are **less fragile** to noise, rephrasing, speaker shifts
 
 ### ✨ Additional Indicators of Quality
@@ -109,9 +111,9 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 
 | Model | FLEURS WER | Domain Test WER |
 |-------|------------|------------------|
-| CV + FLEURS | 12.21% ✅ | 69.00% ❌ |
-| Custom only | 34.00% ✅ | 42.00% ✅ |
-| All combined | 13.00% ✅ | 31.00% ✅ |
+| CV + FLEURS | 12.21% ✅ | 62.86% ❌ |
+| Custom only | 34.73% ✅ | 40.44% ✅ |
+| All combined | 13.21% ✅ | 39.42% ✅ |
 
 ---
 
@@ -119,9 +121,9 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 
 | Model | Training Data | Description | Hugging Face |
 |-------|---------------|-------------|---------------|
-| `asr-cv-fleurs` | CV + FLEURS | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/your-org/asr-cv-fleurs) |
-| `asr-domain-only` | Custom only | Robust real-world ASR | [🔗 View](https://huggingface.co/your-org/asr-domain-only) |
-| `asr-combined` | All datasets | General-purpose ASR | [🔗 View](https://huggingface.co/your-org/asr-combined) |
+| `cv-fleurs-openslr` | CV + FLEURS + OpenSLR | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper_Large_v2-Decodis_Base) |
+| `asr-domain-only` | Custom only | Robust real-world ASR | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper-Largev2-Decodis_FT) |
+| `combined` | All datasets | General-purpose ASR | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper_Largev2-Decodis_Comb_FT) |
 
 ---
 
@@ -136,13 +138,31 @@ Try your own audio, evaluate model predictions, and tell us:
 - Does our custom-trained model work better on your speech?
 - Are there accent mismatches or coverage gaps?
 - Does benchmark-trained ASR work well in your environment?
+---
 
-💬 Share your insights:
+📝 Please try the models and share your feedback, issues, or results via:
 
-- [GitHub Issues](https://github.com/your-org/your-repo/issues)
-- [Model Discussions on Hugging Face](https://huggingface.co/your-org)
+GitHub Issues: Submit an issue
+
+Hugging Face Discussions: Join the conversation
+
+Your feedback will help us refine our dataset and improve ASR for underrepresented languages like Swahili and Yoruba.
 
 ---
 
 ## 📂 Repository Structure
+- We include the Evaluation python notebook
+  
+## Dependencies
+- Transformers
+- Pytorch
+- datasets
+
+## ```bibtex
+@misc{asr_swahili_yoruba_2025,
+  title={Robust ASR for Swahili: A Multidataset Ablation Study},
+  author={Kazi Rafat},
+  year={2025},
+  url={https://github.com/King-Rafat/Robust_Swahili_ASR},
+}
 
