@@ -89,8 +89,8 @@ We asked:
 Here’s the evidence that it is **helping**:
 
 - **FLEURS improved from 40% → 34%** just using our data  
-- On clean + custom model, FLEURS WER only increased slightly (12 → 13)  
-- Domain WER dropped significantly when our data was added (62 → 39)
+- On clean + custom model, FLEURS WER only increased slightly (12% → 13%)  
+- Domain WER dropped significantly when our data was added (62% → 39%)
 - Models trained with our data are **less fragile** to noise, rephrasing, speaker shifts
 
 ### ✨ Additional Indicators of Quality
