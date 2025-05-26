@@ -7,9 +7,9 @@ Welcome to our open-source repository exploring **automatic speech recognition (
 
 We present a complete ablation study using:
 
-- 🌐 Open-source datasets (Common Voice + FLEURS + OPENSLR)
+- 🌐 Open-source datasets
 - 🗣️ A hand-collected, high-variance real-world dataset
-- 🧪 Three ASR models: Clean-only, Domain-only, Combined
+- 🧪 Three ASR models: Open-Source-only, Custom-only, Combined
 
 ---
 
@@ -25,14 +25,15 @@ Low-resource African languages like Swahili and Yoruba are often trained and eva
 
 🔎 We show that **benchmark performance is not a reliable proxy for real-world ASR quality** — and that even a small, well-labeled domain dataset can **improve generalization** meaningfully.
 
+Decodis collects “in the wild” natural language data sets in the course of conducting research with populations who speak low-resource languages.  The audio data is collected by Interactive Voice Recording (IVR) by calling a basic or smartphone.  The interview questions prompt interviewees to answer in open-ended responses. One interview can be completed by 1000+ people in one week, quickly yielding hundreds of hours of natural language data.
+
 ---
 
 ## 📦 Datasets Used
 
 | Dataset | Type | Langs | Hours | Notes |
 |--------|------|-------|--------|-------|
-| **Common Voice 11.0** | Converstional, Read-aloud, crowd-sourced | Swahili | ~250h | noisy, Mixed mic quality, many speakers |
-| **FLEURS** | Benchmark-quality read speech | Swahili | ~50h | Clean studio-style speech |
+| **Open Source Dataset** | Converstional, Read-aloud, crowd-sourced | Swahili | ~350h |Clean studio-style and noisy speech, Mixed mic quality, many speakers, manually labelled |
 | **Custom Dataset** | Conversational, noisy, real-world | Swahili | ~50h | Diverse, high-noise, manually labeled |
 
 ### 🧠 Custom Dataset Highlights
@@ -109,10 +110,10 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 
 ## 📈 WER Summary
 
-| Model | FLEURS WER | Domain Test WER |
+| Model | FLEURS WER | Decodis Test WER |
 |-------|------------|------------------|
-| CV + FLEURS | 12.21%  | 62.86%  |
-| Custom only | 34.73%  | 40.44%  |
+| Opensource Only | 12.21%  | 62.86%  |
+| Custom Only | 34.73%  | 40.44%  |
 | All combined | 13.21% | 39.42%  |
 
 ---
@@ -121,8 +122,8 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 
 | Model | Training Data | Description | Hugging Face |
 |-------|---------------|-------------|---------------|
-| `cv-fleurs-openslr` | CV + FLEURS + OpenSLR | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper_Large_v2-Decodis_Base) |
-| `asr-domain-only` | Custom only | Robust real-world ASR | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper-Largev2-Decodis_FT) |
+| `Opensource` | Opensource-Only | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper_Large_v2-Decodis_Base) |
+| `Custom` | Custom only | Robust real-world ASR | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper-Largev2-Decodis_FT) |
 | `combined` | All datasets | General-purpose ASR | [🔗 View](https://huggingface.co/RafatK/Swahili-Whisper_Largev2-Decodis_Comb_FT) |
 
 ---
