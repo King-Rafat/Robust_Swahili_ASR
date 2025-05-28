@@ -165,13 +165,17 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 ---
 
 ## 🤗 Try the Models on Hugging Face  
-###Swahili
+
+### Swahili
+
 | Model | Training Data | Description | Hugging Face |
 |-------|---------------|-------------|---------------|
 | `Swahili Opensource` | Opensource-Only | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Swahili-Decodis_Base) |
 | `Swahili Custom` | Custom only | Robust real-world ASR | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Swahili-Decodis_FT) |
 | `Swahili Combined` | All datasets | General-purpose ASR | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Swahili-Decodis_Comb_FT) |
-###Yoruba
+
+### Yoruba
+
 | Model | Training Data | Description | Hugging Face |
 |-------|---------------|-------------|---------------|
 | `Yoruba Opensource` | Opensource-Only | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Yoruba-Decodis_Base) |
