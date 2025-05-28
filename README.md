@@ -1,4 +1,4 @@
-<p align="centre">
+<p align="center">
   <a href="https://decodis.com/">
     <img
       src="https://static.wixstatic.com/media/41bde8_fdfad2782d8641edb098e72f1ea10d65~mv2.png/v1/fill/w_185,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/41bde8_fdfad2782d8641edb098e72f1ea10d65~mv2.png" style="display: inline-block; vertical-align: middle;"
