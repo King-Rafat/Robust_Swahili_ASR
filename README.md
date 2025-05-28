@@ -74,7 +74,7 @@ All models use the same Whisper Large v2 architecture and training setup for con
 
 ### 🇰🇪 Swahili
 
-#### 1. 🧼 Opensource-Only: `Common Voice + FLEURS + OpenSLR`
+#### 1. 🧼 Opensource-Only: 
 - Strong benchmark performance, but poor real-world generalization.
 - **FLEURS WER**: 12.21%  
 - **Decodis WER**: 62.86%  
@@ -100,7 +100,7 @@ All models use the same Whisper Large v2 architecture and training setup for con
 
 ### 🇳🇬 Yoruba
 
-#### 1. 🧼 Opensource-Only: `Common Voice + FLEURS + OpenSLR`
+#### 1. 🧼 Opensource-Only: 
 - Performs decently on clean test sets.
 - Suffers massive degradation on real-world data.
 - **FLEURS WER**: 26.18%  
@@ -165,13 +165,18 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 ---
 
 ## 🤗 Try the Models on Hugging Face  
-
+###Swahili
 | Model | Training Data | Description | Hugging Face |
 |-------|---------------|-------------|---------------|
 | `Swahili Opensource` | Opensource-Only | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Swahili-Decodis_Base) |
 | `Swahili Custom` | Custom only | Robust real-world ASR | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Swahili-Decodis_FT) |
 | `Swahili Combined` | All datasets | General-purpose ASR | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Swahili-Decodis_Comb_FT) |
-
+###Yoruba
+| Model | Training Data | Description | Hugging Face |
+|-------|---------------|-------------|---------------|
+| `Yoruba Opensource` | Opensource-Only | Clean-only, benchmark-centric | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Yoruba-Decodis_Base) |
+| `Yoruba Custom` | Custom only | Robust real-world ASR | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Yoruba-Decodis_FT) |
+| `Yoruba Combined` | All datasets | General-purpose ASR | [🔗 View](https://huggingface.co/RafatK/Whisper_Largev2-Yoruba-Decodis_Comb_FT) |
 
 ---
 
