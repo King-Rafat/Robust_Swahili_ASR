@@ -1,7 +1,7 @@
-# 🧠 A Robust ASR Study for Swahili
+# 🧠 A Robust ASR Study for Swahili and Yoruba
 ## 🔍 Exploring Benchmark Gaps and Real-World Speech Generalization
 
-Welcome to our open-source repository exploring **automatic speech recognition (ASR)** in **Swahili**, where we investigate how open benchmark datasets compare to **real-world, noisy, conversational speech**. 
+Welcome to our open-source repository exploring **automatic speech recognition (ASR)** in **Swahili** and **Yoruba**, where we investigate how open benchmark datasets compare to **real-world, noisy, conversational speech**. 
 
 **GitHub Repository by** [DECODIS](https://www.decodis.com/)
 
@@ -31,10 +31,19 @@ Decodis collects “in the wild” natural language data sets in the course of c
 
 ## 📦 Datasets Used
 
+**Swahili**
 | Dataset | Type | Langs | Hours | Notes |
 |--------|------|-------|--------|-------|
 | **Open Source Dataset** | Converstional, Read-aloud, crowd-sourced | Swahili | ~350h |Clean studio-style and noisy speech, Mixed mic quality, many speakers, manually labelled |
-| **Custom Dataset** | Conversational, noisy, real-world | Swahili | ~50h | Diverse, high-noise, manually labeled |
+| **Decodis Custom Dataset** | Conversational, noisy, real-world | Swahili | ~50h | Diverse, high-noise, manually labeled |
+
+**Yoruba**
+
+| Dataset | Type | Langs | Hours | Notes |
+|--------|------|-------|--------|-------|
+| **Open Source Dataset** | Converstional, Read-aloud, crowd-sourced | Yoruba | ~40h |Clean studio-style and noisy speech, Mixed mic quality, many speakers, manually labelled |
+| **Decodis Dataset** | Conversational, noisy, real-world | Yoruba | ~23h | Diverse, high-noise, manually labeled |
+
 
 ### 🧠 Custom Dataset Highlights
 
@@ -50,6 +59,8 @@ This dataset is **small but high-quality**, with audio/text that *actually refle
 ---
 
 ## 🧪 Model Variants Trained
+
+#Swahili
 
 We trained three models using the `whisper large v2` architecture with identical settings for fair comparison.
 
@@ -78,6 +89,8 @@ We trained three models using the `whisper large v2` architecture with identical
 - **Domain WER**: 39.42%
 
 **Conclusion**: Combined data improves real-world usability with minimal loss on benchmarks.
+
+#Yoruba
 
 ---
 
