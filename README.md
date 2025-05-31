@@ -12,8 +12,6 @@
 
 Welcome to our open-source repository exploring **automatic speech recognition (ASR)** in **Swahili** and **Yoruba**, where we investigate how open benchmark datasets compare to **real-world, noisy, conversational speech**.  
 
-**GitHub Repository by** [DECODIS](https://www.decodis.com/)  
-
 We present a complete ablation study using:
 
 - 🌐 Open-source datasets  
