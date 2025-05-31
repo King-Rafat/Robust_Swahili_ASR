@@ -154,9 +154,9 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 
 | Language | Model | FLEURS WER | Decodis WER |
 |----------|-------|------------|--------------|
-| Swahili | Opensource | 12.21%  | 62.86%  |
+| Swahili | Opensource | 13.31%  | 69.86%  |
 | Swahili | Decodis Only | 34.73%  | 40.44%  |
-| Swahili | Combined | 13.21% | 39.42%  |
+| Swahili | Combined | 12.41% | 39.42%  |
 | Yoruba | Opensource | 26.18% | 81.29%  |
 | Yoruba | Decodis Only | 66.22% | 64.51%  |
 | Yoruba | Combined | 25.44% | 62.05%  |
