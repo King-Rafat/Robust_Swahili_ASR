@@ -43,7 +43,7 @@ Decodis collects “in the wild” natural language data sets in the course of c
 **Swahili**  
 | Dataset | Type | Langs | Hours | Notes |
 |--------|------|-------|--------|-------|
-| **Open Source Dataset** | Converstional, Read-aloud, crowd-sourced | Swahili | ~350h |Clean studio-style and noisy speech, Mixed mic quality, many speakers, manually labelled |
+| **Open Source Dataset** | Converstional, Read-aloud, crowd-sourced | Swahili | ~400h |Clean studio-style and noisy speech, Mixed mic quality, many speakers, manually labelled |
 | **Decodis Custom Dataset** | Conversational, noisy, real-world | Swahili | ~50h | Diverse, high-noise, manually labeled |
 
 **Yoruba**  
@@ -76,8 +76,8 @@ All models use the same Whisper Large v2 architecture and training setup for con
 
 #### 1. 🧼 Opensource-Only: 
 - Strong benchmark performance, but poor real-world generalization.
-- **FLEURS WER**: 12.21%  
-- **Decodis WER**: 62.86%  
+- **FLEURS WER**: 13.31%  
+- **Decodis WER**: 69.86%  
 
 > 📌 The model performs well on controlled, clean datasets, but collapses on spontaneous speech — suggesting it learns patterns specific to open-source corpora, not transferable language understanding.
 
@@ -91,7 +91,7 @@ All models use the same Whisper Large v2 architecture and training setup for con
 
 #### 3. 🔀 Combined: `All datasets`
 - Balanced performance across both domains.
-- **FLEURS WER**: 13.21%  
+- **FLEURS WER**: 12.41%  
 - **Decodis WER**: 39.42%  
 
 > ✅ This model demonstrates **dual generalization** — solid performance on both clean and noisy environments. The Decodis dataset acts as a generalization booster, adding robustness to a model otherwise fragile to real-world variation.
@@ -132,9 +132,8 @@ We asked:
 
 Here’s the evidence that it is **helping**:
 
-- **FLEURS improved from 40% → 34%** just using our data  
-- On clean + custom model, FLEURS WER only increased slightly (12% → 13%)  
-- Domain WER dropped significantly when our data was added (62% → 39%)  
+- **FLEURS improved from 40% → 34%** just using our data    
+- Domain WER dropped significantly when our data was added (69% → 39%)  
 - Models trained with our data are **less fragile** to noise, rephrasing, speaker shifts  
 
 ### ✨ Additional Indicators of Quality  
