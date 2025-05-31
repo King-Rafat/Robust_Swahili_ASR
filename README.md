@@ -83,7 +83,7 @@ All models use the same Whisper Large v2 architecture and training setup for con
 - Trained solely on 50 hours of diverse, noisy real-world audio.
 - Surprisingly decent benchmark performance.
 - **FLEURS WER**: 34.73% *(improved from 40.00% baseline)*  
-- **Decodis WER**: 40.44%  
+- **Decodis WER**: 46.44%  
 
 > ✅ This model generalizes *both ways*: even without access to clean corpora, it learns transferrable acoustic and linguistic patterns that improve FLEURS. This proves the **depth and diversity** of the Decodis data — it's noisy, but rich.
 
@@ -153,7 +153,7 @@ This dataset, though 1/6 the size of the combined corpus, contributes **dispropo
 | Language | Model | FLEURS WER | Decodis WER |
 |----------|-------|------------|--------------|
 | Swahili | Opensource | 13.31%  | 69.86%  |
-| Swahili | Decodis Only | 34.73%  | 40.44%  |
+| Swahili | Decodis Only | 34.73%  | 46.44%  |
 | Swahili | Combined | 12.41% | 39.42%  |
 | Yoruba | Opensource | 26.18% | 81.29%  |
 | Yoruba | Decodis Only | 66.22% | 64.51%  |
