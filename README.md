@@ -42,13 +42,13 @@ Decodis collects “in the wild” natural language data sets in the course of c
 | Dataset | Type | Langs | Hours | Notes |
 |--------|------|-------|--------|-------|
 | **Open Source Dataset** | Converstional, Read-aloud, crowd-sourced | Swahili | ~400h |Clean studio-style and noisy speech, Mixed mic quality, many speakers, manually labelled |
-| **Decodis Custom Dataset** | Conversational, noisy, real-world | Swahili | ~50h | Diverse, high-noise, manually labeled |
+| **(Decodis Dataset)[https://huggingface.co/datasets/RafatK/Decodis_Test_Set]** | Conversational, noisy, real-world | Swahili | ~50h | Diverse, high-noise, manually labeled |
 
 **Yoruba**  
 | Dataset | Type | Langs | Hours | Notes |
 |--------|------|-------|--------|-------|
 | **Open Source Dataset** | Converstional, Read-aloud, crowd-sourced | Yoruba | ~40h |Clean studio-style and noisy speech, Mixed mic quality, many speakers, manually labelled |
-| **Decodis Dataset** | Conversational, noisy, real-world | Yoruba | ~23h | Diverse, high-noise, manually labeled |
+| **(Decodis Dataset)[https://huggingface.co/datasets/RafatK/Decodis_Test_Set]** | Conversational, noisy, real-world | Yoruba | ~23h | Diverse, high-noise, manually labeled |
 
 
 ### 🧠 Custom Dataset Highlights
