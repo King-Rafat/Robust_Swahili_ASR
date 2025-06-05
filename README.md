@@ -206,6 +206,11 @@ Try your own audio, evaluate model predictions, and tell us:
 Your feedback will help us refine our dataset and improve ASR for underrepresented languages like Swahili and Yoruba.
 
 ---
+## Issued License
+- These models are solely for testing
+- [LICENSE](https://github.com/Rafat-decodis/Robust-ASR-for-Low-Resource-Languages/edit/main/LICENSE.txt)
+
+---
 
 ## 📂 Repository Structure  
 - Evaluation notebook  
