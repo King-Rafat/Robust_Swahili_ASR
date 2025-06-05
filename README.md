@@ -5,14 +5,18 @@
       alt="DECODIS_Website"
     />
   </a>
-     <a href="https://github.com/Rafat-decodis/Robust-ASR-for-Low-Resource-Languages/tree/main" target="_blank" style="margin: 2px;">
+  
+
+  </a>
+  </p>
+  <p align="center">
+       <a href="https://github.com/Rafat-decodis/Robust-ASR-for-Low-Resource-Languages/blob/main/LICENSE.txt" target="_blank" style="margin: 2px;">
       <img 
         src="https://img.shields.io/badge/Decodis-LICENSE-D3E9D4?color=D3E9D4&logo=github" style="display: inline-block; vertical-align: middle;"
         alt="Main code"
       />
-  </a>
-  </p>
-  
+    </p>
+
   
 # 🧠 A Robust ASR Study for Swahili and Yoruba  
 ## 🔍 Exploring Benchmark Gaps and Real-World Speech Generalization  
