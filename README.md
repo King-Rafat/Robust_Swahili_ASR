@@ -208,7 +208,7 @@ Your feedback will help us refine our dataset and improve ASR for underrepresent
 ---
 ## Issued License
 - These models are solely for testing
-- [LICENSE](https://github.com/Rafat-decodis/Robust-ASR-for-Low-Resource-Languages/edit/main/LICENSE.txt)
+- [LICENSE](https://github.com/Rafat-decodis/Robust-ASR-for-Low-Resource-Languages/blob/main/LICENSE.txt)
 
 ---
 
