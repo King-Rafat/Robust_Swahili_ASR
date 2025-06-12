@@ -27,7 +27,8 @@ We present a complete ablation study using:
 
 - 🌐 Open-source datasets  
 - 🗣️ A hand-collected, high-variance real-world dataset  
-- 🧪 Three ASR models: Open-Source-only, Custom-only, Combined  
+- 🧪 Three ASR models: Open-Source-only, Custom-only, Combined
+- Attached presentation for the ablation
 
 ---
 
